@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+    <div id="paint">
+        <h2 id="title">Draw a number</h2>
+        <canvas id="myCanvas"></canvas>
+        <button id="predict-btn" onclick="onPredict()">Predict</button>
+    </div>
+    <div id="prediction"></div>
+
+    <script src="{{url_for('static', filename='app.js')}}"></script>
+</body>
+
+</html>
