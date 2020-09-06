@@ -8,11 +8,8 @@ import base64
 import binascii
 import torch
 import torch.nn as nn
-import pandas as pd
 import math
 import cv2
-import numpy as np
-from matplotlib import pyplot as plt
 import os
 
 app = Flask(__name__)
@@ -53,7 +50,7 @@ def predictLogic(pil_img):
     test_res = torch.tensor([3]).type(torch.long)
     test_pred, test_loss = model.forward(
         test_image.float(), test_res)
-    return np.argmax(torch.nn.functional.softmax(test_pred).detach().cpu().numpy())
+    return torch.nn.functional.softmax(test_pred).detach().cpu().argmax().item()
 
 
 class Lin(torch.autograd.Function):
