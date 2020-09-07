@@ -41,7 +41,8 @@ def predictLogic(pil_img):
     model = Model()
     # print(list(model.parameters()))
 
-    model.load_state_dict(torch.load('model_parameters3.pth'))
+    model.load_state_dict(torch.load(
+        'model_parameters3.pth', map_location=torch.device('cpu')))
 
     # print(torch.sum(torch.tensor(list(pil_img.getdata()), dtype=torch.float64), 1).shape)
     test_image = torch.sum(torch.tensor(
