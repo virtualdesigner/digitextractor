@@ -40,7 +40,7 @@ function onPredict() {
     console.log(imageData.data)
     var dataURL = canvas.toDataURL();
 
-    fetch('http://localhost:5000/predict', {
+    fetch(`${window.location.origin}/predict`, {
             method: "POST",
             body: JSON.stringify({
                 "imgData": dataURL
