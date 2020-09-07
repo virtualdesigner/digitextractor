@@ -37,7 +37,7 @@ var onPaint = function () {
 
 function onPredict() {
     const imageData = ctx.getImageData(0, 0, canvas.height, canvas.width);
-    console.log(imageData.data)
+    // console.log(imageData.data)
     var dataURL = canvas.toDataURL();
 
     fetch(`/predict`, {
@@ -54,7 +54,7 @@ function onPredict() {
         })
         .then((myJson) => {
             // console.log("Prediction: " + myJson.prediction);
-            document.getElementById('prediction').innerText = myJson.prediction
+            document.getElementById('result').innerText = `It's ${myJson.prediction}.`
         });
 
 }

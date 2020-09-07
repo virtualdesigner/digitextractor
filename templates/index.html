@@ -8,11 +8,16 @@
 
 <body>
     <div id="paint">
-        <h2 id="title">Draw a number</h2>
-        <canvas id="myCanvas"></canvas>
+        <h1 id="title">Digit Extractor</h1>
+        <div id="input_and_output">
+            <div id="canvas_wrapper">
+                <canvas id="myCanvas"></canvas>
+            </div>
+            <div id="result">Draw in the black box.</div>
+        </div>
         <button id="predict-btn" onclick="onPredict()">Predict</button>
+
     </div>
-    <div id="prediction"></div>
 
     <script src="{{url_for('static', filename='app.js')}}"></script>
 </body>
