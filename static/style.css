@@ -51,11 +51,10 @@ body {
     align-items: center;
     box-shadow: 0px 0px 10px 2px #6f6f6f;
     background-color: #fff;
-    margin-left: 200px;
 }
 
 #input_and_output {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
